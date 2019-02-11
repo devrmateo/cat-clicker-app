@@ -1,0 +1,10 @@
+#image {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+figcaption {
+     width: 100%;
+     text-align: center;
+}
