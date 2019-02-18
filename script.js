@@ -39,17 +39,28 @@ function populateDisplay(displayData) {
   const displayArea = document.querySelector('.cat');
   const list = document.querySelector('.list');
   list.addEventListener('click', (e) => {
-    let filteredCat = displayData.filter((cat) =>
-      cat.name === e.target.innerHTML)[0];
-    let header = document.createElement('h3');
+    let filteredCat = displayData.filter((cat) => cat.name === e.target.innerHTML)[0];
+    let header = document.querySelector('h3');
     header.innerHTML = filteredCat.name;
-    let image = document.createElement('img');
+    let image = document.querySelector('img');
     image.src = filteredCat.pic;
     image.alt = filteredCat.name;
-    displayArea.innerHTML = '';
-    displayArea.insertAdjacentElement('afterbegin', header);
-    displayArea.insertAdjacentElement('beforeend', image);
+    filteredCat.count = 0;
+    updateCounter(filteredCat.count);
   });
+}
+
+function updateCounter(count) {
+  const cat = document.querySelector('img');
+  const counter = document.querySelector('.counter');
+  counter.innerHTML = '';
+
+  cat.addEventListener('click', (function(num) {
+    return function () {
+      num += 1;
+      counter.innerHTML = 'Number of clicks: ' + num;
+    }
+  })(count));
 }
 
 clickModule();

@@ -22,8 +22,11 @@ button {
   cursor: pointer;
 }
 
-figure {
+.cat {
   width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 img {
@@ -32,10 +35,4 @@ img {
 
 h3 {
   margin-top: 0;
-  text-align: center;
-}
-
-figcaption {
-     width: 100%;
-     text-align: center;
 }
