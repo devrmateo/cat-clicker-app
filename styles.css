@@ -5,16 +5,33 @@
 }
 
 .cat {
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-img {
-  max-width: 100%;
+  width: 75%;
 }
 
 h3 {
   margin-top: 0;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+figure {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  figure {
+    width: 40%;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.counter1, .counter2 {
+  margin-top: 1em;
 }
