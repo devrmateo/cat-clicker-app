@@ -1,12 +1,17 @@
-function populateImages() {
+function populateCats() {
   const img1 = document.querySelector('.one')
   const img2 = document.querySelector('.two')
   img1.src = "images/cat.jpg"
   img2.src = "images/cat2.jpeg"
+  const cat1Name = "Bubbles"
+  const cat2Name = "Daisy"
+  const cat1Header = document.querySelector('.header1')
+  const cat2Header = document.querySelector('.header2')
+  cat1Header.innerHTML = cat1Name
+  cat2Header.innerHTML = cat2Name
 }
 
 function registerClick() {
-  populateImages()
   const img1 = document.querySelector('.one')
   const img2 = document.querySelector('.two')
   const arr = [img1, img2]
@@ -50,5 +55,6 @@ function populateCounter(num, image) {
 }
 
 (function runApp() {
+  populateCats()
   registerClick()
 })()
