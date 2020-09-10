@@ -4,11 +4,27 @@
   justify-content: center;
 }
 
+.catList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+  list-style: none;
+}
+
 .cat {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100%;
   width: 75%;
+}
+
+.listItem {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h3 {
