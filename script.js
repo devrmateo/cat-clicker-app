@@ -59,6 +59,16 @@ function populateCatsList() {
       }
     })(img))
   })
+
+  const firstImage = document.createElement('img')
+  firstImage.src = `images/${catInfo[0].urlInsert
+    }.jpg`
+  const firstHeader = document.querySelector('.header')
+  firstHeader.innerHTML = catInfo[0].name
+
+
+  document.querySelector('.header').insertAdjacentElement('afterend', firstImage)
+
 }
 
 function registerClick(cat) {
@@ -99,7 +109,7 @@ function populateCounter(num, cat) {
 
 
   const span = document.createElement("span")
-  const content = document.createTextNode(` ${cat.count}`)
+  const content = document.createTextNode(` ${cat.count} `)
   span.appendChild(content)
   counter.appendChild(span)
 
